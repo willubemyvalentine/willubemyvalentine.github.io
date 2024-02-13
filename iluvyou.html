@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+}
+        .tenor-gif-embed{
+            width: 400px;
+            height: 400px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        button{
+            background-color: #FFB6C1;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+        .textdiv{
+            font-family: 'Nunito';
+            font-size: 40px;
+            font-weight: bold;
+            color: #FFB6C1;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+        #noButton {
+            position: absolute;
+            transition: 0.5s;
+            margin-left: 200px;
+}
+        .knopki {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 20px;
+}
+#yes-button {
+    position: relative;
+    margin-right: 270px;
+}
+    </style>
+    <script>
+        function nextPage() {
+            window.location.href = "да/yeaaaaaa.html";
+        }
+    
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+         }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img style="display: block;-webkit-user-select: none;margin: 0; background-color: #ffffff;" src="https://media.tenor.com/UW9cxCBEfcQAAAAi/cute-cat.gif">
+        <div class="textdiv">Будешь моей валентинкой?</div>
+        <div class="knopki">
+            <button id="yes-button" style="font-size: 16px;" onclick="nextPage()">Да</button>
+            <button id="noButton" onmouseover="moveButton()" onclick="moveButton()">нет</button>
+        </div>
+    </div>
+</body>
+</html>
